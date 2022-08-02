@@ -71,26 +71,5 @@
 				font-family: inherit;
 			}
 	</style>
-	<script type="text/javascript">
-		function BMI() {
-			var h=document.getElementById('h').value;
-			var w=document.getElementById('w').value;
-			var bmi=w/(h/100*h/100);
-			var bmio=(bmi.toFixed(2));
-
-			document.getElementById("result").innerHTML="BMI của bạn là " + bmio;
-		}
-	</script>
-	<body>
-		<div>
-			<h2>Tính BMI</h2>
-			<p class="text">Chiều cao</p>
-			<input type="text" id="h">
-			<p class="text">Cân Nặng</p>
-			<input type="text" id="w">
-			<p id="result"></p>
-			<button id="btn" onClick="BMI()">Tính</button>
-			<p id="info">Đơn vị chiều cao [cm], cân nặng [kg]</p>
-		</div>
 	</body>
 </html>
