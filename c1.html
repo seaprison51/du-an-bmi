@@ -16,8 +16,8 @@
 		div{
 			width: 400px;
 			position: absolute;
-			top: 50px;
-			left: 50px;
+			top: 50%;
+			left: 50%;
 			transform: translate(-50%, -50%);
 			background-color: #ffffff;
 			padding: 20px;
@@ -30,12 +30,12 @@
 		}
 		.text{
 			text-align: left;
-			margin-left: 150px;
+			margin-left: 90px;
 		}
 		#w, #h{
 			color: #222f3e;
 			text-align: left;
-			font-size: 20px;
+			font-size: 15px;
 			font-weight: 200;
 			outline: none;
 			border: none;
@@ -76,25 +76,27 @@
                 <h2>Thông tin</h2>
                 <p class="text">Tỉnh:</p>
                 <select>
+					<option>Tỉnh, thành phố</option>
                     <option>Tây Ninh</option>
                     <option>Bình Phước</option>
                 </select>
                 <p class="text">Trường:</p>
                 <select>
+					<option>Trường</option>
                     <option>THPT Chuyên Hoàng Lê Kha</option>
                     <option>THPT Chuyên Bình Long</option>
                 </select>
                 <p class="text">Lớp:</p>
-			    <input type="text" placeholder="VD: 11N2">
+			    <input type="text" id=h placeholder="VD: 11N2">
                 <p class="text">Tên:</p>
-			    <input type="text" placeholder="VD: Nguyễn Văn A">
+			    <input type="text" id=h placeholder="VD: Nguyễn Văn A">
                 <p class="text">Ngày sinh:</p>
-			    <input type="text" placeholder="VD: dd/mm/yyyy">
+			    <input type="text" id=h placeholder="VD: dd/mm/yyyy">
                 <p class="text">Mã số học sinh:</p>
-			    <input type="text" placeholder="VD: 210423">
+			    <input type="text" id=h placeholder="VD: 210423">
 		</div>
 	</body>
-    <style media="screen">
+	<style media="screen">
 		body{
 			margin: 0;
 			padding: 0;
@@ -106,8 +108,8 @@
 		div{
 			width: 400px;
 			position: absolute;
-			top: 50px;
-			left: 50px;
+			top: 50%;
+			left: 50%;
 			transform: translate(-50%, -50%);
 			background-color: #ffffff;
 			padding: 20px;
@@ -120,12 +122,12 @@
 		}
 		.text{
 			text-align: left;
-			margin-left: 150px;
+			margin-left: 90px;
 		}
 		#w, #h{
 			color: #222f3e;
 			text-align: left;
-			font-size: 20px;
+			font-size: 15px;
 			font-weight: 200;
 			outline: none;
 			border: none;
@@ -162,15 +164,15 @@
 			}
 	</style>
 	<body>
-        <div>
-                <h2>Sức khỏe</h2>
-                <p class="text">Chiều cao:</p>
-			    <input type="text" placeholder="Đơn vị: cm, VD: 170">
-                <p class="text">Cân nặng:</p>
-			    <input type="text" placeholder="Đơn vị: kg, VD: 60">
-                <p class="text">Các mục khác:</p>
-                <input type="radio" name="can">Cận thị
-                <input type="radio" name="boi">Biết bơi
+		<div>
+				<h2>Sức khỏe</h2>
+				<p class="text">Chiều cao:</p>
+				<input type="text" id=h placeholder="Đơn vị: cm, VD: 170">
+				<p class="text">Cân nặng:</p>
+				<input type="text" id=h placeholder="Đơn vị: kg, VD: 60">
+				<p class="text">Các mục khác:</p>
+				<input type="radio" name="can">Cận thị
+				<input type="radio" name="boi">Biết bơi
 		</div>
 	</body>
 </html>
