@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Medical Health Tracking</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+}
+
+/* Định dạng header */
+.header {
+  background-color: 	#90EE90;
+  color: 		#FF0000;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Định dạng thanh điều hướng trên cùng */
+.topnav {
+  overflow: hidden;
+  background-color: 	#87CEFA;
+}
+
+/* Định dạng link điều hướng */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Thay đổi màu liên kết khi di chuột qua */
+.topnav a:hover {
+    background-color: #db7093;
+  color: white;
+  font-weight: bold
+}
+
+/* Tạo ba cột không bằng nhau, float cạnh nhau */
+.column {
+  float: left;
+  padding: 10px;
+  color:black
+}
+
+/* Cột bên trái và phải */
+.column.side {
+  width: 30%;
+}
+
+/* Cột chính giữa */
+.column.middle {
+  width: 40%;
+  text-align: center;
+}
+
+/* Clear float khác sau các cột */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Bố cục linh hoạt: ba cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
+có chiều rộng dưới 600px */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+}
+}
+
+/* Định dạng footer */
+.footer {
+  background-color: #e9d8f4;
+  color: #58257b;
+  padding: 5px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Khai báo cá nhân</h1>
+</div>
+
+<div class="topnav">
+  <a href="#">Trang chủ</a>
+  <a href="#">Tổ chức</a>
+  <a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/chi-so-bmi-bao-nhieu-la-binh-thuong/">Tham khảo lời khuyên sức khỏe từ chuyên gia</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Thông tin cá nhân </h2>
+      <p>Vui lòng điền hết!</p>
+        <div>
+                <p class="text">Tỉnh:</p>
+                <select>
+					<option>Tỉnh, thành phố</option>
+                    <option>Tây Ninh</option>
+                    <option>Bình Phước</option>
+                </select>
+                <p class="text">Trường:</p>
+                <select>
+                    <option>Trường</option>
+                    <option>THPT Chuyên Hoàng Lê Kha</option>
+                    <option>THPT Chuyên Bình Long</option>
+                    <option>Khác - Vui lòng nhập vào ô bên cạnh.</option>
+                    <input type="text" id=h placeholder="VD: 11N2">
+                </select>
+                <p class="text">Lớp:</p>
+                <input type="text" id=h placeholder="VD: 11N2">
+                <p class="text">Tên:</p>
+			    <input type="text" id=h placeholder="VD: Nguyễn Văn A">
+                <p class="text">Ngày sinh:</p>
+			    <input type="text" id=h placeholder="VD: dd/mm/yyyy">
+                <p class="text">Mã số học sinh:</p>
+			    <input type="text" id=h placeholder="VD: 210423">
+		</div>
+        <p>Vui lòng chuyển qua bước nhập BMI</p>
+    </div>
+  <div class="column middle">
+			<h2>Tính BMI</h2>
+			<p class="text">Chiều cao</p>
+			<input type="text" id="h">
+			<p class="text">Cân Nặng</p>
+			<input type="text" id="w">
+			<p id="result"></p>
+			<button id="btn" onClick="BMI()">Tính</button>
+            <p class="text">Nhóm máu</p>
+			<select>
+                <option>A</option>
+                <option>B</option>
+                <option>AB</option>
+                <option>O</option>
+            </select>  
+            <p id="hi"></p>
+            <button id="hi" onClick="ketquaha()">Nộp dữ liệu</button>
+  </div>
+  <div class="column side">
+    <h2>Bạn có biết?</h2>
+    <p>Chỉ số BMI (Body Mass Index) hay còn gọi là chỉ số khối cơ thể, chỉ số thể trọng, là một công cụ thường được sử dụng để đo lượng mỡ trong cơ thể. Chỉ số BMI chuẩn được tính dựa trên chiều cao và cân nặng, áp dụng cho nam và nữ trưởng thành.</p>
+    <p> BMI < 18,5: Gầy.</p>
+    <p> BMI từ 18,5 - 24,9: Bình thường.</p>
+    <p> BMI  ≥ 25: Thừa cân.</p>
+    <p> BMI > 30: Béo phì.</p>
+    <p> Click vào ô "Tham khảo lời khuyên" để hiểu rõ hơn.</p>
+    <h2>Liên hệ</h2>
+      <p>Trung tâm điều hành - TKINTER</p>
+      <p>Điện thoại: 0123456789</p>
+      <p>Email: info@tkinter.com</p>
+  </div>
+</div>
+<div class="footer">
+  <p>Giấy phép số 362/GP-BTTTT. Bộ TT&TT cấp ngày 30/06/2016.</p>
+</div>
+    <script type="text/javascript">
+    function BMI() {
+        var h=document.getElementById('h').value;
+        var w=document.getElementById('w').value;
+        var bmi=w/(h/100*h/100);
+        var bmio=(bmi.toFixed(3));
+        document.getElementById("result").innerHTML="BMI của bạn là " + bmio;
+    }
+    </script>
+    <script type="text/javascript">
+        function ketquaha() {
+            document.getElementById("hi").innerHTML = "Bạn đã nộp dữ liệu thành công. Xin cảm ơn!";
+        }
+    </script>
+</body>
+</html>
