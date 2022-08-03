@@ -83,16 +83,21 @@
 	</script>
     <body>
 		<div>
-				<h2>Sức khỏe</h2>
-				<p class="text">Chiều cao:</p>
-				<input type="text" id=h placeholder="Đơn vị: cm, VD: 170">
-				<p class="text">Cân nặng:</p>
-				<input type="text" id=w placeholder="Đơn vị: kg, VD: 60">
-				<p class="text">Các mục khác:</p>
-                <input type="radio" name="can">Cận thị
-				<input type="radio" name="boi">Biết bơi
-                <p id="result"> </p>
-				<button id="btn" onClick="BMI()">Tính BMI</button>
-		</div>
+            <h2>Chỉ Số Sức Khỏe</h2>
+            <p class="text">Chiều cao:</p>
+            <input type="text" id=h placeholder="Đơn vị: cm, VD: 170">
+            <p class="text">Cân nặng:</p>
+            <input type="text" id=w placeholder="Đơn vị: kg, VD: 60">
+            <p class="radio-container">
+                <input type="radio" id="can" name="can" />
+                <label for="can">Cận thị</label>
+            </p>
+            <p class="radio-container">
+                <input type="radio" id="boi" name="boi" />
+                <label for="boi">Biết bơi</label>
+            </p>
+            <p id="result"> </p>
+            <button id="btn" onClick="BMI()">Tính BMI</button>
+    </div>
 	</body>
 </html>
