@@ -97,7 +97,7 @@
     .abc{
         width: 400px;
         position: absolute;
-        top: 60%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #ffffff;
@@ -105,24 +105,29 @@
         border-radius: 10px;
         box-shadow: 1px 1px 20px #ee5253;
     }
-    h2{
+    span{
         font-size: 30px;
         font-weight: 600;
+        color: #ffffff;
+        background-color: #341f97;
+        padding: 8px;
+        border-radius: 10px;
     }
     .text{
         text-align: left;
-        margin-left: 90px;
+        margin-left: 80px;
+        font-size: 20px;
     }
     #w, #h{
         color: #222f3e;
         text-align: left;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 200;
         outline: none;
         border: none;
         background: none;
         border-bottom: 1px solid #341f97;
-        width: 200px;
+        width: 280px;
     }
         #w:focus, #h:focus{
             border-bottom: 2px solid #341f97;
@@ -152,15 +157,16 @@
             font-family: inherit;
         }
     select{
-        width: 200px;
-        font-size: 16px;
+        width: 280px;
+        font-size: 20px;
         box-shadow: 1px 1px 1px #341f97
     }
 </style>
 <body>
     <div class="abc">
 			<p class="text"></p>
-            <h2>Thông tin</h2>
+            <h2> <span>Thông tin</span> </h2>
+            <p class="text"></p>
             <p class="text">Tỉnh:</p>
             <select>
                 <option>Tỉnh, thành phố</option>
@@ -178,11 +184,11 @@
             <p class="text">Lớp:</p>
             <input type="text" id=h placeholder="VD: 11N2">
 			<p class="text"></p>
-            <p class="text">Tên:</p>
+            <p class="text">Họ và tên:</p>
             <input type="text" id=h placeholder="VD: Nguyễn Văn A">
 			<p class="text"></p>
             <p class="text">Ngày sinh:</p>
-            <input type="text" id=h placeholder="VD: dd/mm/yyyy">
+            <input type="text" id=h placeholder="dd/mm/yyyy">
 			<p class="text"></p>
             <p class="text">Mã số học sinh:</p>
             <input type="text" id=h placeholder="VD: 210423">
