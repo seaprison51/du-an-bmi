@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tag-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Công cụ tính và lưu trữ chỉ số sức khỏe</title>
+
+    <!-- Boostrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+
+  <body>
+    
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container">
+            <a
+                href="#"
+                class="navbar-brand mb-0 h1">
+                    <img
+                        class="d-inline-block align-top" 
+        
+                        src="data:image/jpeg;base64,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"
+                        width="30" height="30" />
+                        Tkinter Project
+            </a>
+            <button 
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div 
+                class="collapse navbar-collapse"   
+                id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link active">
+                            Home 
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            Function 1
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            Function 2 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
