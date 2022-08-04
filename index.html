@@ -12,7 +12,7 @@
 
   <body style="height: 2000px;">
     
-        <nav class="navbar fixed-top navbar-expand-sm navbar-dark"      
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark" 
         style="background-color:#026773">
             <div class="container">
             <a
@@ -70,11 +70,15 @@
                     </li>
                 </ul>
             </div>
-            <form class="d-flex">
-                <input type="text" class="form-control me-2">
-                <button type="submit" class="btn btn-primary">
-                    Tìm kiếm
-                </button>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" 
+                type="search" 
+                placeholder="Tim kiem" 
+                aria-label="Search">
+                <button class="btn btn-success" 
+                type="submit">
+                Search
+            </button>
             </form>
             </div>
         </nav>
