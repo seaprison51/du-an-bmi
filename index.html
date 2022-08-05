@@ -68,20 +68,79 @@
                             Function 2 
                         </a>
                     </li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" 
+                        type="search" 
+                        placeholder="Tìm kiếm" 
+                        aria-label="Search">
+                        <button class="btn btn-success" 
+                        type="submit">
+                        Search
+                    </button>
+                    </form>
                 </ul>
             </div>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" 
-                type="search" 
-                placeholder="Tìm kiếm" 
-                aria-label="Search">
-                <button class="btn btn-success" 
-                type="submit">
-                Search
-            </button>
-            </form>
             </div>
         </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
+  <style media="screen">
+    body{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: sans-serif;
+        background-image: linear-gradient(120deg,#e84393, #2ecc71);
+        min-height: 100vh;
+    }
+    .abc{
+        width: 500px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px #ee5253;
+    }
+    span{
+        font-size: 30px;
+        font-weight: 600;
+        color: #F29472;
+    }
+    .text{
+        text-align: left;
+        margin-left: 80px;
+        font-size: 30px;
+    }
+        #btn{
+            font-family: inherit;
+            margin-top: 10px;
+            border: none;
+            color: #ffffff;
+            background-image: linear-gradient(120deg,#2ecc71, #e84393);
+            width: 150px;
+            padding: 20px;
+            border-radius: 30px;
+            outline: none;
+            cursor: pointer;
+        }
+</style>
+    <div class="abc">
+        <p class="text"></p>
+            <h2> <span>Thông tin</span> </h2>
+        <p class="text"></p>
+        <p class="text"></p>
+            <a href="http://127.0.0.1:5500/b1.html">
+            <button id="btn" onClick="link()">Cá nhân</button>
+            </a>
+        <p class="text"></p>
+        <p class="text"></p>
+        <p class="text"></p>
+            <a href="http://127.0.0.1:5500/c1.html">
+            <button id="btn" onClick="link()">Trường học</button>
+            </a>
+        <p class="text"></p>
+    </div>
 </html>
