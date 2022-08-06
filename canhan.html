@@ -198,27 +198,24 @@
 			var bmi=w/(h/100*h/100);
 			var bmio=(bmi.toFixed(2));
 			document.getElementById("result").innerHTML="BMI của bạn là " + bmio;
-		}
-		function hamnhanxet(form) {
-		  var h=document.getElementById('h').value;
-			var w=document.getElementById('w').value;
-			var bmi=w/(h/100*h/100);
-			var bmio=(bmi.toFixed(2)); 
-					 if (bmio >= 30) {
-						document.getElementById("nhanxet").innerHTML= "Chỉ số BMI ở trên cho thấy bạn bị béo phì.";
-					}
-	
-					else if (bmio >= 25 && bmio < 30) {
-						document.getElementById("nhanxet").innerHTML= "Chỉ số BMI ở trên cho thấy bạn bị thừa cân!";
-					}
-	
-					else if (bmio >= 18.5 && bmio < 25) {
-					  document.getElementById("nhanxet").innerHTML= "Chỉ số BMI ở trên cho thấy bạn bình thường.";
-					}
-	
-					else if (bmio < 18.5) {
-					document.getElementById("nhanxet").innerHTML= "Chỉ số BMI ở trên cho thấy bạn bị thiếu cân!";
-					}
+		if (bmio >= 40){
+				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ III.";
+			}
+			if (bmio >= 35 && bmio < 40){
+				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ II.";
+			}
+			if (bmio >= 30 && bmio < 35){
+				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ I.";
+			}
+			else if(bmio >= 25 && bmio < 30){
+				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn có nguy cơ bị béo phì.";
+			}
+			else if (bmio >= 18.5 && bmio < 25){
+			  document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bình thường.";
+			}
+			else if (bmio < 18.5){
+			document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị thiếu cân!";
+			}
 	
 		}	 
 		</script>
