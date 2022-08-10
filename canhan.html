@@ -191,12 +191,19 @@
 		<div class="abc">
 			<p class="text"></p>
             <h2>Chỉ Số <span class="dc">Sức Khỏe</span></h2>
-            <p class="text"></p>
-            <p class="text">Chiều cao:</p>
-            <input type="text" id=h placeholder="Đơn vị: cm, VD: 170">
-            <p class="text"></p>
-            <p class="text">Cân nặng:</p>
-            <input type="text" id=w placeholder="Đơn vị: kg, VD: 60">
+			<form action="" id="ca_nhan">
+                <div class="msg"></div>
+				<p class="text"></p>
+				<p class="text">Chiều cao:</p>
+				<input type="text" id=h placeholder="Đơn vị: cm, VD: 170">
+                <p> </p>
+				<span id="required1"></span>
+				<p class="text"></p>
+				<p class="text">Cân nặng:</p>
+				<input type="text" id=w placeholder="Đơn vị: kg, VD: 60">
+                <p> </p>
+                <span id ="required2"></span>
+				</form>
             <p id="result"> </p>
             <button id="btn" onClick="BMI()">Tính BMI</button>
             <p class="text"></p>
@@ -209,10 +216,7 @@
 			var w=document.getElementById('w').value;
 			var bmi=w/(h/100*h/100);
 			var bmio=(bmi.toFixed(2));
-	
-			if (bmio >= 40){
-				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ III.";
-			}
+            
 			if (bmio >= 35 && bmio < 40){
 				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ II.";
 			}
@@ -228,8 +232,27 @@
 			else if (bmio < 18.5){
 			document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị thiếu cân!";
 			}
+            let errors = {};
+    if (w.trim()==''){
+        errors['w']= 'Cân nặng không được để trống!';
+        document.getElementById("required2").innerHTML = errors['w'];
+        document.getElementById("result").innerHTML= "BMI của bạn là: Error"
+    }
+    if (h.trim()=='') {
+        errors['h']= 'Chiều cao không được để trống!';
+        document.getElementById("required1").innerHTML = errors['h'];
+        document.getElementById("result").innerHTML= "BMI của bạn là: Error"
+    }
+    if (h.length>0){
+        document.getElementById("required1").innerHTML = ""
+        };
+    if (w.length>0){
+        document.getElementById("required2").innerHTML = ""
+        };
+    
 		}
 	</script>
 	</div>
+<script type="text/javascript" scr="script.js"></script>
 	</body>
 </html>
