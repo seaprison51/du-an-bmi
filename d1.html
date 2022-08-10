@@ -51,7 +51,7 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                         >
-                            Function 1
+						Function 1
                         </a>
                         <ul class="dropdown-menu" 
                         aria-labelledby="navbarDropdown">
@@ -65,7 +65,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            Function 2 
+							Function 2
                         </a>
                     </li>
                 </ul>
@@ -84,166 +84,139 @@
         </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
-  <style media="screen">
-    body{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        font-family: sans-serif;
-        background-image: linear-gradient(120deg,#e84393, #2ecc71);
-        min-height: 100vh;
-    }
-    .abc{
-        width: 400px;
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #ffffff;
-        padding: none;
-        border-radius: 10px;
-        box-shadow: 1px 1px 20px #ee5253;
-    }
-    h2{
-        margin-top: 30px;
-        font-size: 30px;
-        font-weight: 600;
-    }
-	.dc{
-		font-size: 30px;
-        font-weight: 600;
-		color: #ffffff;
-        background-color: #ee5253;
-        padding: 6px;
-        border-radius: 10px;
+  <style>
+	* {
+	  box-sizing: border-box;
 	}
-    label{
-        text-align: left;
-        margin-left: 30px;
-        font-size: 20px;
-    }
-    .radio{
-        text-align: left;
-        margin-left: 90px;
-    }
-    .text{
-        text-align: left;
-        margin-left: 80px;
-        font-size: 20px;
-    }
-    #w, #h{
-        color: #222f3e;
-        text-align: left;
-        font-size: 20px;
-        font-weight: 200;
-        outline: none;
-        border: none;
-        background: none;
-        border-bottom: 1px solid #341f97;
-        width: 280px;
-    }
-        #w:focus, #h:focus{
-            border-bottom: 2px solid #341f97;
-            width: 300px;
-            transition: 0.5s;
-        }
-        #result{
-            color: #341f97;
-        }
-        #btn{
-            font-family: inherit;
-            border: none;
-            color: #ffffff;
-            background-image: linear-gradient(120deg,#2ecc71, #e84393);
-            width: 150px;
-            padding: 10px;
-            border-radius: 30px;
-            outline: none;
-            cursor: pointer;
-        }
-        #btn:hover{
-            box-shadow: 1px 1px 10px #341f97;
-        }
-        #btnn{
-            font-family: inherit;
-            margin-bottom:  30px;
-            border: none;
-            color: #ffffff;
-            background-image: linear-gradient(120deg,#2ecc71, #e84393);
-            width: 150px;
-            padding: 10px;
-            border-radius: 30px;
-            outline: none;
-            cursor: pointer;
-        }
-        #info{
-            font-size: 12px;
-            font-family: inherit;
-        }
-        select{
-            width: 280px;
-            font-size: 20px;
-            box-shadow: 1px 1px 1px #341f97
-        }
-</style>
-<script type="text/javascript">
-    function BMI(){
-        var h=document.getElementById('h').value;
-        var w=document.getElementById('w').value;
-        var bmi=w/(h/100*h/100);
-        var bmio=(bmi.toFixed(2));
-
-        if (bmio >= 40){
-            document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ III.";
-        }
-        if (bmio >= 35 && bmio < 40){
-            document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ II.";
-        }
-        if (bmio >= 30 && bmio < 35){
-            document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ I.";
-        }
-        else if(bmio >= 25 && bmio < 30){
-            document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn có nguy cơ bị béo phì.";
-        }
-        else if (bmio >= 18.5 && bmio < 25){
-          document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bình thường.";
-        }
-        else if (bmio < 18.5){
-        document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị thiếu cân!";
-        }
-    }
-</script>
-<body>
-    <div class="abc">
-			<p class="text"></p>
-            <h2>Chỉ Số <span class="dc">Sức Khỏe</span></h2>
-            <p class="text">Nhóm máu:</p>
-        <select>
-            <option>Nhóm máu</option>
-            <option>A</option>
-            <option>B</option>
-            <option>AB</option>
-            <option>O</option>
-        </select>
-            <p class="text"></p>
-            <p class="text">Chiều cao:</p>
-            <input type="text" id=h placeholder="Đơn vị: cm, VD: 170">
-            <p class="text"></p>
-            <p class="text">Cân nặng:</p>
-            <input type="text" id=w placeholder="Đơn vị: kg, VD: 60">
-            <p class="text"></p>
-            <p class="radio">
-                <input type="radio" id="can" name="can" />
-                <label for="can">Cận thị</label>
-            </p>
-            <p class="radio">
-                <input type="radio" id="boi" name="boi" />
-                <label for="boi">Biết bơi</label>
-            </p>
-            <p id="result"> </p>
-            <button id="btn" onClick="BMI()">Tính BMI</button>
-            <p class="text"></p>
-            <button id="btnn">Hoàn Thành</button>
-    </div>
-</body>
+	
+	body {
+	  margin: 0;
+	
+	}
+	body{
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				font-family: 'Times New Roman', Times, serif;
+				background-image: linear-gradient(120deg,#e84393, #2ecc71);
+				min-height: 100vh;
+			}
+		#btn{
+					font-family: inherit;
+					margin-top: 10px;
+					border: none;
+					color: #ffffff;
+					background-image: linear-gradient(120deg,#2ecc71, #e84393);
+					width: 200px;
+					padding: 10px;
+					border-radius: 30px;
+					outline: none;
+					cursor: pointer;
+				}
+		  #w, #h{
+				color: #222f3e;
+				text-align: left;
+				font-size: 15px;
+				font-weight: 200;
+				outline: none;
+				border: none;
+				background: none;
+				border-bottom: 1px solid #341f97;
+				width: 150px;
+			}
+	  /* Định dạng header */
+	  .header {
+				padding: 70px;
+				text-align: center;
+			}
+	/* Tạo ba cột không bằng nhau, float cạnh nhau */
+	.column {
+	  float: left;
+	  padding: 10px;
+	}
+	
+	/* Cột bên trái và phải */
+	.column.side {
+	  width: 30%;
+	}
+	
+	/* Cột chính giữa */
+	.column.middle {
+	  width: 40%;
+	  text-align: center;
+	  font-size: medium;
+	  background-color: #ffffff;
+	  padding: 10px;
+				border-radius: 10px;
+				box-shadow: 1px 1px 20px #ee5253;
+	}
+	
+	/* Clear float khác sau các cột */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	/* Bố cục linh hoạt: ba cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình 
+	có chiều rộng dưới 600px */
+	@media screen and (max-width: 600px) {
+	  .column.side, .column.middle {
+		width: 100%;
+	}
+	}
+	</style>
+	<style>
+	</style>
+	<body>
+	
+	  <div class="header">
+	  <h1></h1>
+	</div>
+	
+	<div class="row">
+	  <div class="column side">
+	  </div>
+	  <div class="column middle">
+		  <h2>Tính BMI</h2>
+		  <p class="text">Chiều cao</p> 
+		  <input type="text" id="h"placeholder="Đơn vị: cm ; VD: 170">
+		  <p class="text">Cân Nặng</p>
+		  <input type="text" id="w" placeholder="Đơn vị: kg ; VD: 60">
+		  <p id="result"></p>
+		  <button id="btn" onClick="BMI()">Tính</button>
+		  <p> </p>
+			<a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/chi-so-bmi-bao-nhieu-la-binh-thuong/">
+				  <button id="btn" onClick="link()">Tham khảo lời khuyên từ chuyên gia</button>
+		</div>
+		
+		<script type="text/javascript">
+		function BMI(){
+			var h=document.getElementById('h').value;
+			var w=document.getElementById('w').value;
+			var bmi=w/(h/100*h/100);
+			var bmio=(bmi.toFixed(2));
+	
+			if (bmio >= 40){
+				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ III.";
+			}
+			if (bmio >= 35 && bmio < 40){
+				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ II.";
+			}
+			if (bmio >= 30 && bmio < 35){
+				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ I.";
+			}
+			else if(bmio >= 25 && bmio < 30){
+				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn có nguy cơ bị béo phì.";
+			}
+			else if (bmio >= 18.5 && bmio < 25){
+			  document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bình thường.";
+			}
+			else if (bmio < 18.5){
+			document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị thiếu cân!";
+			}
+		}
+	</script>
+	</div>
+	</body>
 </html>
