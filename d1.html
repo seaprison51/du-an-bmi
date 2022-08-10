@@ -96,7 +96,7 @@
     .abc{
         width: 400px;
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #ffffff;
@@ -180,6 +180,11 @@
             font-size: 12px;
             font-family: inherit;
         }
+        select{
+            width: 280px;
+            font-size: 20px;
+            box-shadow: 1px 1px 1px #341f97
+        }
 </style>
 <script type="text/javascript">
     function BMI(){
@@ -212,6 +217,14 @@
     <div class="abc">
 			<p class="text"></p>
             <h2>Chỉ Số <span class="dc">Sức Khỏe</span></h2>
+            <p class="text">Nhóm máu:</p>
+        <select>
+            <option>Nhóm máu</option>
+            <option>A</option>
+            <option>B</option>
+            <option>AB</option>
+            <option>O</option>
+        </select>
             <p class="text"></p>
             <p class="text">Chiều cao:</p>
             <input type="text" id=h placeholder="Đơn vị: cm, VD: 170">
