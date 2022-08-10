@@ -51,7 +51,7 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                         >
-                            Function 1
+						Function 1
                         </a>
                         <ul class="dropdown-menu" 
                         aria-labelledby="navbarDropdown">
@@ -65,7 +65,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            Function 2 
+							Function 2
                         </a>
                     </li>
                 </ul>
@@ -97,7 +97,7 @@
 				margin: 0;
 				padding: 0;
 				text-align: center;
-				font-family: sans-serif;
+				font-family: 'Times New Roman', Times, serif;
 				background-image: linear-gradient(120deg,#e84393, #2ecc71);
 				min-height: 100vh;
 			}
@@ -107,7 +107,7 @@
 					border: none;
 					color: #ffffff;
 					background-image: linear-gradient(120deg,#2ecc71, #e84393);
-					width: 150px;
+					width: 200px;
 					padding: 10px;
 					border-radius: 30px;
 					outline: none;
@@ -122,7 +122,7 @@
 				border: none;
 				background: none;
 				border-bottom: 1px solid #341f97;
-				width: 200px;
+				width: 150px;
 			}
 	  /* Định dạng header */
 	  .header {
@@ -185,20 +185,19 @@
 		  <input type="text" id="w" placeholder="Đơn vị: kg ; VD: 60">
 		  <p id="result"></p>
 		  <button id="btn" onClick="BMI()">Tính</button>
-		  <button id="btn" onClick="hamnhanxet(form)">Nhận xét</button> 
-		  <p id="nhanxet"></p>
 		  <p> </p>
-		  <a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/chi-so-bmi-bao-nhieu-la-binh-thuong/">
-				<button id="btn" onClick="link()">Tham khảo lời khuyên từ chuyên gia</button>
+			<a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/chi-so-bmi-bao-nhieu-la-binh-thuong/">
+				  <button id="btn" onClick="link()">Tham khảo lời khuyên từ chuyên gia</button>
 		</div>
-	<script type="text/javascript">
-		function BMI() {
+		
+		<script type="text/javascript">
+		function BMI(){
 			var h=document.getElementById('h').value;
 			var w=document.getElementById('w').value;
 			var bmi=w/(h/100*h/100);
 			var bmio=(bmi.toFixed(2));
 	
-		if (bmio >= 40){
+			if (bmio >= 40){
 				document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị béo phì cấp độ III.";
 			}
 			if (bmio >= 35 && bmio < 40){
@@ -216,9 +215,8 @@
 			else if (bmio < 18.5){
 			document.getElementById("result").innerHTML= "BMI của bạn là " + bmio + "." + " Chỉ số BMI trên cho thấy bạn bị thiếu cân!";
 			}
-	
-		}	 
-		</script>
+		}
+	</script>
 	</div>
 	</body>
 </html>
