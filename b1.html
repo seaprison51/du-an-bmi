@@ -238,12 +238,12 @@
     if (w.trim()==''){
         errors['w']= 'Cân nặng không được để trống!';
         document.getElementById("required2").innerHTML = errors['w'];
-        document.getElementById("result").innerHTML= "BMI của bạn là: Error"
+        document.getElementById("result").innerHTML= "Kiểm tra lại dữ liệu!"
     }
     if (h.trim()=='') {
         errors['h']= 'Chiều cao không được để trống!';
         document.getElementById("required1").innerHTML = errors['h'];
-        document.getElementById("result").innerHTML= "BMI của bạn là: Error"
+        document.getElementById("result").innerHTML= "Kiểm tra lại dữ liệu!"
     }
     if (h.length>0){
         document.getElementById("required1").innerHTML = ""
@@ -255,6 +255,5 @@
 		}
 	</script>
 	</div>
-<script type="text/javascript" scr="script.js"></script>
 	</body>
 </html>
