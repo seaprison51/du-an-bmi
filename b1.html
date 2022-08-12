@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
 
-  <body style="height: 2000px;">
+  <body style="height: 755px;">
     
         <nav class="navbar fixed-top navbar-expand-sm navbar-dark" 
         style="background-color:#026773">
@@ -86,17 +86,19 @@
   </body>
   <style media="screen">
     body{
-        margin: 0;
-        padding: 0;
+       
         text-align: center;
         font-family: sans-serif;
-        background-image: linear-gradient(120deg,#e84393, #2ecc71);
-        min-height: 100vh;
+        background-image: url("https://images.pexels.com/photos/39671/physiotherapy-weight-training-dumbbell-exercise-balls-39671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-repeat: no-repeat;
+        background-color: #82D0D9;
+        background-position: center;
+        background-size: cover;
     }
     .abc{
-        width: 400px;
+        width: 500px;
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #ffffff;
@@ -185,7 +187,7 @@
             font-size: 20px;
             box-shadow: 1px 1px 1px #341f97
         }
-	   #required1{ color: red }
+        #required1{ color: red }
         #required2{ color: red }
 </style>
 	<body>
@@ -206,12 +208,12 @@
                 <p> </p>
                 <span id ="required2"></span>
 				</form>
-            <p id="result"> </p>
+            <p id="result"> </p> 
             <button id="btn" onClick="BMI()">Tính BMI</button>
             <p class="text"></p>
             <a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/chi-so-bmi-bao-nhieu-la-binh-thuong/" target="_blank">
 				<button id="btn" onClick="link()">Tham khảo lời khuyên từ chuyên gia</button>
-		 <p> </p>
+                <p> </p>
 		<script type="text/javascript">
 		function BMI(){
 			var h=document.getElementById('h').value;
