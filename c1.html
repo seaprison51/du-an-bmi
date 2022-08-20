@@ -217,5 +217,31 @@
                 <button id="btn" onClick="check()">Tiếp theo</button>
                 </a>
     </div>
+<script type="text/javascript">
+    function check(){
+        var l=document.getElementById('l').value;
+        var f=document.getElementById('f').value;
+        var n=document.getElementById('n').value;
+        var m=document.getElementById('m').value;
+        
+        let errors = {};
+        if (l.trim()==""){
+            errors['l']= 'Lớp không được để trống!';
+            document.getElementById("requiredl").innerHTML = errors['l'];
+        }
+        if (f.trim()=="") {
+            errors['f']= 'Tên không được để trống!';
+            document.getElementById("requiredf").innerHTML = errors['f'];
+        }
+        if (n.trim()=="") {
+            errors['n']= 'Ngày sinh không được để trống!';
+            document.getElementById("requiredn").innerHTML = errors['n'];
+        }
+        if (m.trim()=="") {
+            errors['m']= 'Mã số học sinh không được để trống!';
+            document.getElementById("requiredm").innerHTML = errors['m'];
+        }
+        }
+</script>
 </body>
 </html>
