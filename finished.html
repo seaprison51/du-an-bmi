@@ -29,7 +29,7 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item active">
-						<a href="./index.html" target="_self" class="nav-link active">
+						<a href="index.html" class="nav-link active">
 							Trang chủ
 						</a>
 					</li>
@@ -39,8 +39,10 @@
 							Trường học
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a href="#" class="dropdown-item">Trường THPT Chuyên Hoàng Lê Kha</a></li>
-							<li><a href="#" class="dropdown-item">Trường THPT Chuyên Bình Long</a></li>
+							<li><a href="thong_tin_ca_nhan.html" class="dropdown-item">Trường THPT Chuyên Hoàng Lê
+									Kha</a></li>
+							<li><a href="thong_tin_ca_nhan.html" class="dropdown-item">Trường THPT Chuyên Bình Long</a>
+							</li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
@@ -49,12 +51,9 @@
 							Giải pháp
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a href="https://www.youtube.com/watch?v=RIJ2Jclv9Dg" target="_blank"
-									class="dropdown-item">Tăng cân</a></li>
-							<li><a href="https://www.youtube.com/watch?v=GGP3NbP7O2w" target="_blank"
-									class="dropdown-item">Giảm cân</a></li>
-							<li><a href="https://www.youtube.com/watch?v=eY3lQbM-zeo" target="_blank"
-									class="dropdown-item">Giữ dáng</a></li>
+							<li><a href="#" class="dropdown-item">Tăng cân</a></li>
+							<li><a href="#" class="dropdown-item">Giảm cân</a></li>
+							<li><a href="#" class="dropdown-item">Giữ dáng</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -91,7 +90,7 @@
 	span {
 		font-size: 30px;
 		font-weight: 600;
-		color: #495073;
+		color: red;
 	}
 
 	.text {
@@ -106,28 +105,31 @@
 		border: none;
 		color: #ffffff;
 		background-image: linear-gradient(120deg, #F280B6, #5EA4BF);
-		width: 200px;
+		width: 400px;
 		padding: 20px;
 		border-radius: 30px;
 		outline: none;
 		cursor: pointer;
 	}
+
+	#btn:hover {
+		box-shadow: 1px 1px 10px #341f97;
+	}
 </style>
+<script>
+	// Ngay khi trang này được load thành công, xoá tất cả các thông tin trước đó.
+	window.addEventListener('load', (event) => {
+		localStorage.clear("initial_data")
+	});
+</script>
 <div class="abc">
 	<p class="text"></p>
-	<h2> <span>Thông tin</span> </h2>
-	<p class="text"></p>
-	<p class="text"></p>
-	<a href="./tinh_bmi.html" target="_self">
-		<button id="btn">Cá nhân</button>
-	</a>
-	<p class="text"></p>
-	<p class="text"></p>
-	<p class="text"></p>
-	<a href="./thong_tin_ca_nhan.html" target="_self">
-		<button id="btn">Trường học</button>
+	<h2> <span>Bạn đã nộp dữ liệu thành công!</span> </h2>
+	<a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/chi-so-bmi-bao-nhieu-la-binh-thuong/">
+		<button id="btn">Tham khảo lời khuyên từ chuyên gia!</button>
 	</a>
 	<p class="text"></p>
 </div>
+
 
 </html>
