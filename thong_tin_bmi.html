@@ -363,5 +363,11 @@
         </form>
     </div>
 </body>
-
+<script>
+    let user_form = document.getElementById("submit_form")
+    user_form.onsubmit = function (e) {
+        e.preventDefault()
+        sendData()
+    }
+</script>
 </html>
