@@ -76,6 +76,7 @@
 		crossorigin="anonymous"></script>
 
 </body>
+
 <style media="screen">
     body {
         margin: 0;
@@ -331,20 +332,21 @@
             <h2>Chỉ Số <span class="dc">Sức Khỏe</span></h2>
             <p class="text">Nhóm máu:</p>
             <select name="Nhóm máu">
-                <option>Nhóm máu</option>
+                <option disabled selected>Nhóm máu</option>
                 <option>A</option>
                 <option>B</option>
                 <option>AB</option>
                 <option>O</option>
+                <option>Không nhớ</option>
             </select>
             <p class="text"></p>
             <p class="text">Chiều cao:</p>
-            <input type="text" id=h name="Chiều cao" placeholder="Đơn vị: cm, VD: 170">
+            <input type="text" id=h name="Chiều cao" placeholder="Đơn vị: cm, VD: 170" required>
             <p class="text"></p>
             <span id="requiredh"></span>
             <p class="text"></p>
             <p class="text">Cân nặng:</p>
-            <input type="text" id=w name="Cân nặng" placeholder="Đơn vị: kg, VD: 60">
+            <input type="text" id=w name="Cân nặng" placeholder="Đơn vị: kg, VD: 60" required>
             <p class="text"></p>
             <span id="requiredw"></span>
             <p class="text"></p>
@@ -359,9 +361,17 @@
             <p id="result"> </p>
             <button id="btn" type="button" onClick="BMI()">Tính BMI</button>
             <p class="text"></p>
-            <button id="btnn" type="button" onClick="sendData()">Hoàn Thành</button>
+            <button id="btnn" type="submit">Hoàn Thành</button>
         </form>
     </div>
 </body>
+
+<script>
+    let user_form = document.getElementById("submit_form")
+    user_form.onsubmit = function (e) {
+        e.preventDefault()
+        sendData()
+    }
+</script>
 
 </html>

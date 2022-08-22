@@ -76,6 +76,7 @@
 		crossorigin="anonymous"></script>
 
 </body>
+
 <style media="screen">
     body {
         margin: 0;
@@ -192,17 +193,15 @@
             <h2><span class="dc">Thông tin</span></h2>
             <p class="text"></p>
             <p class="text">Tỉnh:</p>
-            <select name="Tỉnh" id="tinh" onchange="pushSchool(this.value)">
-                <option>Tỉnh, thành phố</option>
+            <select name="Tỉnh" id="tinh" onchange="pushSchool(this.value)" required>
+                <option disabled selected>Tỉnh, thành phố</option>
                 <option value="Tây Ninh">Tây Ninh</option>
                 <option value="Bình Phước">Bình Phước</option>
             </select>
             <p class="text"></p>
             <p class="text">Trường:</p>
-            <select name="Trường" id="truong">
-                <option>Trường</option>
-                <!-- <option>THPT Chuyên Hoàng Lê Kha</option>
-          <option>THPT Chuyên Bình Long</option> -->
+            <select name="Trường" id="truong" required>
+                <option disabled selected>Trường</option>
             </select>
             <p class="text"></p>
             <p class="text">Lớp:</p>
@@ -227,7 +226,7 @@
             <p class="text"></p>
             <p class="text"></p>
             <p class="text" id="error-text"></p>
-            <button id="btn" type="button" onClick="sendData()">Tiếp theo</button>
+            <button id="btn" type="submit">Tiếp theo</button>
         </form>
     </div>
 
@@ -238,22 +237,29 @@
             "Bình Phước": ["THPT Chuyên Bình Long"]
         }
 
+        let user_form = document.getElementById("submit_form")
+        user_form.onsubmit = function (e) {
+            e.preventDefault()
+            saveTempData()
+        }
+
         function pushSchool(province) {
             // clear data:
             let getSchoolElement = document.getElementById('truong');
-            getSchoolElement.innerHTML = "<option>Trường</option>";
+            let getProvinceValue = document.getElementById("tinh").value
 
+            getSchoolElement.innerHTML = "<option>Trường</option>";
             data[province].forEach(element => {
                 const child = document.createElement("option")
                 child.innerText = element;
                 getSchoolElement.appendChild(child);
             });
         }
-        function sendData() {
+
+        function saveTempData() {
             /**
              * Lưu dữ liệu thông tin cá nhân vào Local Storage (bộ nhớ của trình duyệt)
              */
-
 
             localStorage.clear("initial_data"); // Xoá toàn bộ dữ liệu của lần sử dụng trước
 
